@@ -4,9 +4,20 @@
   "description": "A very smart boy to help with the congestion of office hours during the COVID times",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CrescentRune/ambassador-botsworth"
+  },
+  "keywords": [
+    "node",
+    "heroku"
+  ],
+  "author": "Hank Krutulis",
+  "license": "MIT",
+  "dependencies": {
+    "director": "^1.2.8"
+  }
 }
