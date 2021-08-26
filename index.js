@@ -2,7 +2,7 @@ var http, director, bot, router, server, port;
 
 http     = require('http');
 director = require('director');
-bot      = requie('./bot.js');
+bot      = require('./bot.js');
 
 router = new director.http.Router({
     '/' : {
