@@ -1,4 +1,4 @@
-var HTTTPS = require('https');
+var HTTPS = require('https');
 
 var botID = process.env.BOT_ID;
 
@@ -14,7 +14,7 @@ function respond() {
         this.res.end();
         
     }
-    else if (request.text && checkOutCmd.test(reques.text)) {
+    else if (request.text && checkOutCmd.test(request.text)) {
         //HANDLE CHECK OUT REQUEST
         this.res.writeHead(200);
         postMessage('Goodbye!');
@@ -59,7 +59,8 @@ function postMessage(response) {
     botReq.on('timeout', function(err) {
       console.log('timeout posting message '  + JSON.stringify(err));
     });
-    botReq.end(JSON.stringify(body));
+    botReq.write(JSON.stringify(body));
+    botReq.end();
 }
 
 exports.respond = respond;
